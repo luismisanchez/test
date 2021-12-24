@@ -69,12 +69,19 @@ If we have been working only on tracked files we can commit them directly (witho
 `git log`
 
 ``` bash
-luismi@MacBook-Air-de-Luis 01-bases % git log
-commit 24701eb52636ce4b2251dacd6a343b00de0609a7 (HEAD -> master)
+luismi@MacBook-Air-de-Luis GIT % git log
+commit 09edb8ffce84007cf21069bb8c65b178058dc302 (HEAD -> main)
 Author: Luismi Sánchez
-Date:   Fri Dec 24 07:12:38 2021 +0100
+Date:   Fri Dec 24 08:29:16 2021 +0100
 
-    First commit
+    readme updated
+
+commit 8092029c073575f45c7bba604566a5db893377c3
+Author: Luismi Sánchez
+Date:   Fri Dec 24 08:07:56 2021 +0100
+
+    First main commit
+:
 ```
 
 ## Notes about CRLF
