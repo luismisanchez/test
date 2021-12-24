@@ -50,6 +50,10 @@ Add files to track changes
 
 `git add filename1 filename2` or `git add wildcards` (e.g. `git add .`)
 
+Track a whole folder
+
+`git add folderPath\`
+
 (*) In order to track an empty directory to the project (e.g. an empty `uploads` folder) we should create an empty file inside it named as `.gitkeep`
 
 ## Untrack files
@@ -108,4 +112,34 @@ Rename branch:
 
 `git branch -m master main`
 
+## Aliases examples
 
+Git status short
+
+`git config --global alias.s "status -sb"`
+
+``` bash
+luismi@MacBook-Air-de-Luis GIT % git s
+## main
+ M readme.md
+ ```
+
+ Git log oneline decorated
+
+ `git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"`
+
+``` bash
+luismi@MacBook-Air-de-Luis GIT % git lg
+* 547072a - (hace 15 minutos) updated readme and project files - Luismi Sánchez (HEAD -> main)
+* 1187e31 - (hace 15 minutos) added uploads folder - Luismi Sánchez
+* 73eb00c - (hace 30 minutos) readme updated from VSCode - Luismi Sánchez
+* 09edb8f - (hace 40 minutos) readme updated - Luismi Sánchez
+* 995341f - (hace 47 minutos) readme updated - Luismi Sánchez
+* 8092029 - (hace 61 minutos) First main commit - Luismi Sánchez
+```
+
+Useful aliases: https://opensource.com/article/20/11/git-aliases
+
+## Check differences
+
+`git diff` or `git diff --staged` (to see changes on prefiosly staged --added-- files).
