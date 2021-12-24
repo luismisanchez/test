@@ -48,11 +48,13 @@ Report the status of the followed files and commits:
 
 Add files to track changes
 
-`git add filename1 filename2` or `git add regex` (e.g. `git add .`)
+`git add filename1 filename2` or `git add wildcards` (e.g. `git add .`)
+
+(*) In order to track an empty directory to the project (e.g. an empty `uploads` folder) we should create an empty file inside it named as `.gitkeep`
 
 ## Untrack files
 
-`git reset filename` (or regex)
+`git reset filename` (or wildcard)
 
 ## Commit to the repository
 
