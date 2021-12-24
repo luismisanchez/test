@@ -60,6 +60,10 @@ Take a snapshot of the current state of the project
 
 `git commit -m "Initial commit"`
 
+If we have been working only on tracked files we can commit them directly (without adding them in the previous step):
+
+`git commit -am "Commit changes on tracked files"`
+
 ## Logs
 
 `git log`
