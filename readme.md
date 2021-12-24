@@ -22,7 +22,7 @@ This will create the `.git` directory where all the control versioning is stored
 
 Git is changing the convention from `master` branches to `main` so at the moment of writing this notes we'll see this warning (in the system language):
 
-```
+``` bash
 ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
 ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
 ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
@@ -64,7 +64,7 @@ Take a snapshot of the current state of the project
 
 `git log`
 
-```
+``` bash
 luismi@MacBook-Air-de-Luis 01-bases % git log
 commit 24701eb52636ce4b2251dacd6a343b00de0609a7 (HEAD -> master)
 Author: Luismi Sánchez
@@ -82,3 +82,17 @@ Sometimes git warns about line endings on different OS (maybe a partner is *stil
 ## Restoring project to previous commit
 
 `git checkout -- .`
+
+## Branches
+
+> ALWAYS WORK IN BRANCHES
+
+Show current branch and commit:
+
+`git branch -av`
+
+Rename branch:
+
+`git branch -m master main`
+
+
