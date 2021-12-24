@@ -62,13 +62,61 @@ Track a whole folder
 
 ## Commit to the repository
 
-Take a snapshot of the current state of the project
+- Take a snapshot of the current state of the project
 
 `git commit -m "Initial commit"`
 
-If we have been working only on tracked files we can commit them directly (without adding them in the previous step):
+- If we have been working only on tracked files we can commit them directly (without adding them in the previous step):
 
 `git commit -am "Commit changes on tracked files"`
+
+- Fix title of the latest commit:
+
+`git commit --amend -m "fixed commit title"`
+
+(*) without `-m` would enter in interactive `vi` mode
+
+- Undo latest commit maintaining file changes
+
+`git reset --soft HEAD^`
+
+(*) we could undo previous commits using `HEAD^2|3|4...` or the desired commit hash instead of `HEAD^`:
+
+`git reset --soft 6bff2f0`
+
+- Undo commit **and untrack files** maintaining file changes
+
+`git reset --mixed 6bff2f0`
+
+(*) `--mixed` is the default option for `reset`
+
+- Undo commit and file changes
+
+`git reset --hard 6bff2f0`
+
+- **Recover reseted commits**
+
+Check logs: `git reflog`
+
+```bash
+luismi@MacBook-Air-de-Luis 04-material-heroes % git reflog
+311c8f3 (HEAD -> main) HEAD@{0}: reset: moving to HEAD^
+0685467 HEAD@{1}: reset: moving to 0685467
+0685467 HEAD@{2}: reset: moving to 0685467
+0685467 HEAD@{3}: reset: moving to 0685467
+b48bb0b HEAD@{4}: commit: GL & Robin added
+6bff2f0 HEAD@{5}: reset: moving to 6bff2f0
+806e26c HEAD@{6}: commit: GL added
+6bff2f0 HEAD@{7}: commit (amend): historia added
+b595331 HEAD@{8}: commit: historia added
+cb0a715 HEAD@{9}: commit: ciudades added
+0685467 HEAD@{10}: commit: heroes added
+311c8f3 (HEAD -> main) HEAD@{11}: commit: misiones added
+57533c0 HEAD@{12}: commit (initial): readme added
+```
+
+Reset to the desired commit: `git reset --hard b48bb0b`
+
 
 ## Logs
 
@@ -143,3 +191,29 @@ Useful aliases: https://opensource.com/article/20/11/git-aliases
 ## Check differences
 
 `git diff` or `git diff --staged` (to see changes on prefiosly staged --added-- files).
+
+## Working with filesystem
+
+> Using these method we prevent losing history of moved/renamed/deleted files
+
+- Rename/Move files
+
+`git mv destruirmundo.md salvar-mundo.md`
+
+- Delete files
+
+`git rm salvar-mundo.md`
+
+## Ignoring files
+
+A `.gitignore` file should exist on the project root and be commited. This file will include paths or wildcards to be ignored by git (IDE configurations, node_modules, etc).
+
+```bash
+luismi@MacBook-Air-de-Luis 04-material-heroes % cat .gitignore 
+/.idea
+/dist
+/node_modules
+*.log
+/uploads/*.log
+```
+
