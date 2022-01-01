@@ -804,4 +804,40 @@ So we try a pull, but:
 After fixing the conflicts by hand in the editor/IDE we should:
 
 
+    luismi@MacBook-Air-de-Luis GIT % git add readme.md
 
+    luismi@MacBook-Air-de-Luis GIT % git rebase --continue
+
+    fixed rebased readme
+
+    # Por favor ingresa el mensaje del commit para tus cambios. Las
+    #  líneas que comiencen con '#' serán ignoradas, y un mensaje
+    #  vacío aborta el commit.
+    #
+    # rebase interactivo en progreso; sobre 7d05d65
+    # El último comando realizado (1 comando realizado):
+    #    pick abbe42a readme updated
+    # No quedan más comandos.
+    # Estás aplicando un rebase de la rama 'main' sobre '7d05d65.
+    #
+    # Cambios a ser confirmados:
+    #       modificados:     readme.md
+    #
+
+    luismi@MacBook-Air-de-Luis GIT % git rebase --continue
+    [HEAD desacoplado cecf0ba] fixed rebased readme
+    1 file changed, 25 insertions(+), 1 deletion(-)
+    Rebase aplicado satisfactoriamente y actualizado refs/heads/main.
+
+Now we could push:
+
+    luismi@MacBook-Air-de-Luis GIT % git push
+    Enumerando objetos: 5, listo.
+    Contando objetos: 100% (5/5), listo.
+    Compresión delta usando hasta 4 hilos
+    Comprimiendo objetos: 100% (3/3), listo.
+    Escribiendo objetos: 100% (3/3), 656 bytes | 656.00 KiB/s, listo.
+    Total 3 (delta 2), reusados 0 (delta 0), pack-reusados 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/luismisanchez/test.git
+    7d05d65..cecf0ba  main -> main
