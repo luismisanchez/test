@@ -665,7 +665,7 @@ Allows change commit messages.
 
     luismi@MacBook-Air-de-Luis 08-demo-rebase % git rebase -i HEAD~4
 
-It will enter on interactive modo, letting us change the commit messages for each commit marked with r(reword):
+It will enter on interactive mode, letting us change the commit messages for each commit marked with r(reword):
 
     pick 31efae8 Retomando el trabajo que guarde en el stash
     pick acea380 Actualización de las misiones
@@ -678,7 +678,7 @@ It will enter on interactive modo, letting us change the commit messages for eac
     # p, pick <commit> = usar commit
     # r, reword <commit> = usar commit, pero editar el mensaje de commit
 
-Then we could change each commit message (ESV :wq! INTRO) to write and quit to the next:
+Then we could change each commit message: `a` (insert mode); `ESC :wq! INTRO` to write and quit to the next:
 
     Reword: Misiones nuevas agregadas
 
