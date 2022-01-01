@@ -799,7 +799,7 @@ So we try a pull as noted by git warning, but:
     ayuda: To abort and get back to the state before "git rebase", run "git rebase --abort".
     No se pudo aplicar abbe42a... readme updated
 
-After fixing the conflicts by hand in the editor/IDE we should:
+After fixing the conflicts manually in the editor/IDE we should:
 
 
     luismi@MacBook-Air-de-Luis GIT % git add readme.md
