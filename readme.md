@@ -277,7 +277,7 @@ luismi@MacBook-Air-de-Luis demo-06 % git lg
 * ac0d374 - (4 años, y 6 meses atrás) Borramos la historia de batman - Strider
 * b4c748c - (4 años, y 6 meses atrás) Cambiamos el nombre de la historia de superman - Strider
 ```
-- Usually after a merge we **delete the new branch** if no needed anymore:
+- Usually after a merge we **delete the new branch** if not needed anymore:
 
 `git branch -d new-branch`
 
