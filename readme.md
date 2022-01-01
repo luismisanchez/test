@@ -366,7 +366,7 @@ luismi@MacBook-Air-de-Luis demo-06 % git lg
 
 `git tag -d "1.0.0"`
 
-- Add a tag to a pass commit:
+- Add a tag to a past commit:
 
 `git tag -a "alpha-1.0.0" commitHash -m "Alpha version 1.0.0"`
 
@@ -741,4 +741,8 @@ https://docs.github.com/en/get-started/getting-started-with-git/caching-your-git
     git config --global pull.rebase true
 
 This way git allows to rebase (see above) if conflicts found in origin on pull.
+
+## Fixing conflicts with origin on push/pull:
+
+
 
