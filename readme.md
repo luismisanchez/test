@@ -780,4 +780,28 @@ This way git allows to rebase (see above) if conflicts found in origin on pull.
     ayuda: remotos (ej. 'git pull ...') antes de volver a hacer push.
     ayuda: Mira 'Notes about fast-forwards' en 'git push --help' para detalles.
 
-At this point we could Stash our changes, then pull from origin, fix the conflicts with stash and then push. (conflict)
+At this point we could Stash our changes, then pull from origin, fix the conflicts with stash and then push.
+
+So we try a pull, but:
+
+    luismi@MacBook-Air-de-Luis GIT % git pull
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    Desempaquetando objetos: 100% (3/3), 677 bytes | 8.00 KiB/s, listo.
+    Desde https://github.com/luismisanchez/test
+    6dc4645..7d05d65  main       -> origin/main
+    Auto-fusionando readme.md
+    CONFLICTO (contenido): Conflicto de fusión en readme.md
+    error: no se pudo aplicar abbe42a... readme updated
+    ayuda: Resolve all conflicts manually, mark them as resolved with
+    ayuda: "git add/rm <conflicted_files>", then run "git rebase --continue".
+    ayuda: You can instead skip this commit: run "git rebase --skip".
+    ayuda: To abort and get back to the state before "git rebase", run "git rebase --abort".
+    No se pudo aplicar abbe42a... readme updated
+
+After fixing the conflicts by hand in the editor/IDE we should:
+
+
+
