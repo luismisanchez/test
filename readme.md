@@ -553,7 +553,7 @@ luismi@MacBook-Air-de-Luis 07-demo-stash % git stash show stash@{1}
 
 Rebase allow us to reorganize the work done. It's recommended not to change git history, so rebase should only be used before we deploy or push our code. From the git reference book: **Do not rebase commits that exist outside your repository and that people may have based work on.**
 
-It allows to move the branch pointers, squash (fusion) commits, rename, edit, etc:
+It allows to move the branch pointers, squash (fusion) commits, rename, edit, etc. We also should rebase if there ara conflicts pushing/pulling from remote repositories (see bellow).
 
 https://git-scm.com/docs/git-rebase
 
@@ -744,7 +744,11 @@ This way git allows to rebase (see above) if conflicts found in origin on pull.
 
 ## Fixing conflicts with origin on push/pull:
 
+<<<<<<< HEAD
 Conflicto
 
 
+=======
+Vemos conflicto
+>>>>>>> d7b9340 (create origin conflict)
 
