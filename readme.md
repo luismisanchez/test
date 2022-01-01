@@ -732,11 +732,37 @@ https://docs.github.com/en/get-started/getting-started-with-git/caching-your-git
 
     git push --tags
 
+## Pulling remote repositories
+
+If we pull from repositories without setting a strategy git will fail warning about it:
+
+    luismi@MacBook-Air-de-Luis GIT % git pull
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    Desempaquetando objetos: 100% (3/3), 679 bytes | 8.00 KiB/s, listo.
+    Desde https://github.com/luismisanchez/test
+    09b3dc0..6a9c982  main       -> origin/main
+    ayuda: Hacer un pull sin especificar cómo reconciliar las ramas es poco
+    ayuda: recomendable. Puedes eliminar este mensaje usando uno de los
+    ayuda: siguientes comandos antes de tu siguiente pull:
+    ayuda:
+    ayuda:   git config pull.rebase false  # hacer merge (estrategia por defecto)
+    ayuda:   git config pull.rebase true   # aplicar rebase
+    ayuda:   git config pull.ff only       # aplicar solo fast-forward
+    ayuda:
+    ayuda: Puedes reemplazar "git config" con "git config --global" para aplicar
+    ayuda: la preferencia en todos los repositorios. Puedes también pasar --rebase,
+    ayuda: --no-rebase, o --ff-only en el comando para sobrescribir la configuración
+    ayuda: por defecto en cada invocación.
+    fatal: Necesita especificar cómo reconciliar las ramas divergentes.
+
 ## Allow only Fast-forward pulls (set globaly):
 
     git config --global pull.ff only
 
-## Allow rebase pulls (set globaly). RECOMMENDED DEFAULT OPTION:
+## Allow rebase pulls (set globaly). RECOMMENDED OPTION:
 
     git config --global pull.rebase true
 
@@ -744,11 +770,14 @@ This way git allows to rebase (see above) if conflicts found in origin on pull.
 
 ## Fixing conflicts with origin on push/pull:
 
-<<<<<<< HEAD
-Conflicto
+    luismi@MacBook-Air-de-Luis GIT % git push
+    To https://github.com/luismisanchez/test.git
+    ! [rejected]        main -> main (fetch first)
+    error: falló el push de algunas referencias a 'https://github.com/luismisanchez/test.git'
+    ayuda: Actualizaciones fueron rechazadas porque el remoto contiene trabajo que
+    ayuda: no existe localmente. Esto es causado usualmente por otro repositorio
+    ayuda: realizando push a la misma ref. Quizás quieras integrar primero los cambios
+    ayuda: remotos (ej. 'git pull ...') antes de volver a hacer push.
+    ayuda: Mira 'Notes about fast-forwards' en 'git push --help' para detalles.
 
-
-=======
-Vemos conflicto
->>>>>>> d7b9340 (create origin conflict)
-
+At this point we could Stash our changes, then pull from origin, fix the conflicts with stash and then push.
