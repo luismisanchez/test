@@ -707,3 +707,38 @@ Finally git shows what happened:
 
 # Working with GitHub
 
+## Caching GitHub credentials: 
+https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
+
+# See repository remotes
+
+    git remote -v
+
+## Create a new repository on the command line
+    echo "# test" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/luismisanchez/test.git
+    git push -u origin main
+
+## Push an existing repository from the command line
+    git remote add origin https://github.com/luismisanchez/test.git
+    git branch -M main
+    git push -u origin main
+
+## Pushing local tags
+
+    git push --tags
+
+## Allow only Fast-forward pulls (set globaly):
+
+    git config --global pull.ff only
+
+## Allow rebase pulls (set globaly). RECOMMENDED DEFAULT OPTION:
+
+    git config --global pull.rebase true
+
+This way git allows to rebase (see above) if conflicts found in origin on pull.
+
