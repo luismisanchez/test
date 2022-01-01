@@ -653,7 +653,7 @@ Git will show the rebase message at completion:
     * 31efae8 - (4 años, y 6 meses atrás) Retomando el trabajo que guarde en el stash - Strider
     * 8239e26 - (4 años, y 6 meses atrás) Cambios de emergencia en el README - Strider
 
-## - Rebase Reword
+## Rebase Reword
 
 Allows change commit messages.
 
