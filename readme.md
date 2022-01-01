@@ -780,4 +780,4 @@ This way git allows to rebase (see above) if conflicts found in origin on pull.
     ayuda: remotos (ej. 'git pull ...') antes de volver a hacer push.
     ayuda: Mira 'Notes about fast-forwards' en 'git push --help' para detalles.
 
-At this point we could Stash our changes, then pull from origin, fix the conflicts with stash and then push.
+At this point we could Stash our changes, then pull from origin, fix the conflicts with stash and then push. (conflict)
