@@ -705,7 +705,7 @@ Finally git shows what happened:
     * 1df102e - (4 años, y 6 meses atrás) Reword: Misiones nuevas agregadas - Strider
     * acea380 - (4 años, y 6 meses atrás) Actualización de las misiones - Strider
 
-# Working with GitHub
+# Working with Remotes (GitHub examples)
 
 ## Caching GitHub credentials: 
 https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
