@@ -744,5 +744,7 @@ This way git allows to rebase (see above) if conflicts found in origin on pull.
 
 ## Fixing conflicts with origin on push/pull:
 
+Conflicto
+
 
 
