@@ -10,7 +10,7 @@ Check global config per user:
 
 `git config --global -e`
 
-Global config is opened with vi, so we can modify (a) and save changes (Esc :wq!)
+Global config is opened with vi, so we can modify (`a`) and save changes (`ESC :wq!`)
 
 # Init local repository
 
@@ -187,6 +187,8 @@ luismi@MacBook-Air-de-Luis GIT % git lg
 
 Useful aliases: https://opensource.com/article/20/11/git-aliases
 
+
+
 # Check differences
 
 `git diff` or `git diff --staged` (to see changes on previously staged --added-- files).
@@ -362,36 +364,41 @@ luismi@MacBook-Air-de-Luis demo-06 % git lg
 
 # Tags
 
-- Use `tags` to name/number releases:
+Use `tags` to name/number releases:
 
-`git tag -a "1.0.0" -m "Release version 1.0.0"`
+- Create a tag:
+
+        git tag -a "1.0.0" -m "Release version 1.0.0"
+
+- Pushing local tags to remote
+
+        git push --tags
 
 - Check existing tags:
 
-`git tag`
+        git tag
 
 - Remove a tag:
 
-`git tag -d "1.0.0"`
+        git tag -d "1.0.0"
 
 - Add a tag to a past commit:
 
-`git tag -a "alpha-1.0.0" commitHash -m "Alpha version 1.0.0"`
+        git tag -a "alpha-1.0.0" commitHash -m "Alpha version 1.0.0"
 
 - Extended info of a tag:
 
-`git show "1.0.0"`
-```
-tag 1.0.0
-Tagger: Luismi Sánchez
-Date:   Wed Dec 29 20:12:45 2021 +0100
+        git show "1.0.0"
+        
+        tag 1.0.0
+        Tagger: Luismi Sánchez
+        Date:   Wed Dec 29 20:12:45 2021 +0100
 
-Release version 1.0.0
+        Release version 1.0.0
 
-commit 9a387e66dd72188bd79f052888d79b823cc4be3d (HEAD -> main, tag: 1.0.0)
-Merge: 22c78a1 c0c2c1e
-...
-```
+        commit 9a387e66dd72188bd79f052888d79b823cc4be3d (HEAD -> main, tag: 1.0.0)
+        Merge: 22c78a1 c0c2c1e
+        ...
 
 # Stash
 
