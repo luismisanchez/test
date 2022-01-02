@@ -226,27 +226,43 @@ To ignore a file from console we could
 
 # Branches
 
-> ALWAYS WORK IN BRANCHES (DIFFERENT COMMITS TIMELINES)
+> ALWAYS WORK IN BRANCHES (DIFFERENT COMMITS TIMELINES).
+> 
+> WHEN WORK IS DONE, REMOVE THE BRANCH.
 
 - Show current branch and commit:
 
-`git branch -av`
+        git branch -av
 
 - Rename branch:
 
-`git branch -m old-name new-name`
+        git branch -m old-name new-name
 
 - Create a new branch:
 
-`git branch branch-name`
+        git branch branch-name
 
 - Move to branch:
 
-`git checkout branch-name`
+        git checkout branch-name
 
 - Create and move to the new branch:
   
-`git checkout -b new-branch`
+        git checkout -b new-branch
+
+- Remove a branch:
+
+        git checkout -d new-branch
+
+- Remove a remote branch:
+
+        git push origin :new-branch
+
+- Remove non existing remote branches in local repository
+
+        git remote prune origin
+
+
 
 ## Merges
 
