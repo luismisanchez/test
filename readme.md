@@ -839,3 +839,34 @@ Now we could push:
     remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
     To https://github.com/luismisanchez/test.git
     7d05d65..cecf0ba  main -> main
+
+## Fetch
+
+`git fetch` allow getting the references to commits from the remote repository without pulling the data:
+
+    luismi@MacBook-Air-de-Luis GIT % git lg
+    * 6244bcb - (hace 10 horas) readme updated - Luismi Sánchez (HEAD -> main, origin/main)
+    * ee80b52 - (hace 10 horas) readme updated - Luismi Sánchez
+    * df87366 - (hace 10 horas) readme updated - Luismi Sánchez
+
+    luismi@MacBook-Air-de-Luis GIT % git fetch
+    remote: Enumerating objects: 7, done.
+    remote: Counting objects: 100% (7/7), done.
+    remote: Compressing objects: 100% (5/5), done.
+    remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+    Desempaquetando objetos: 100% (6/6), 1.77 KiB | 164.00 KiB/s, listo.
+    Desde https://github.com/luismisanchez/test
+    6244bcb..eeda976  main       -> origin/main
+
+    luismi@MacBook-Air-de-Luis GIT % git lg
+    * eeda976 - (hace 3 minutos) Delete flash.md - Luismi Sánchez (origin/main)
+    * f6973d0 - (hace 4 minutos) Rename historia.flash.md to flash.md - Luismi Sánchez
+    * bac0463 - (hace 4 minutos) Create historia.flash.md - Luismi Sánchez
+    * 6244bcb - (hace 10 horas) readme updated - Luismi Sánchez (HEAD -> main)
+    * ee80b52 - (hace 10 horas) readme updated - Luismi Sánchez
+
+## Recommended flow for git (GitHub)
+
+https://docs.github.com/en/get-started/quickstart/github-flow
+
+Create Branch -> Work in branch -> Create pull request -> Review/comment pull request -> Merge pull request -> Delete branch
