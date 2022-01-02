@@ -870,3 +870,5 @@ Now we could push:
 https://docs.github.com/en/get-started/quickstart/github-flow
 
 Create Branch -> Work in branch -> Create pull request -> Review/comment pull request -> Merge pull request -> Delete branch
+
+On pull requests you can commit and push changes to the branch you are requesting to pull. There is no need to make a new pull request, just comment the changes in order to be reviewed by the mantainers.
