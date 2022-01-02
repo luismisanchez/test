@@ -125,6 +125,14 @@ Reset to the desired commit: `git reset --hard b48bb0b`
 
 `git checkout -- file-name`
 
+## Restoring a file to a single commit
+
+This way you can revert changes in a file if asked to do so in a pull request (see below)
+
+`git checkout commitHash file-name`
+
+Then you can commit and push the changes to continue reviewing the pull request.
+
 # Logs
 
 `git log`
@@ -870,5 +878,9 @@ Now we could push:
 https://docs.github.com/en/get-started/quickstart/github-flow
 
 Create Branch -> Work in branch -> Create pull request -> Review/comment pull request -> Merge pull request -> Delete branch
+
+## Pull requests
+
+You are asking to Pull your work into another repository.
 
 On pull requests you can commit and push changes to the branch you are requesting to pull. There is no need to make a new pull request, just comment the changes in order to be reviewed by the mantainers.
